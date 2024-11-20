@@ -1,9 +1,10 @@
 package BmiController;
 
 import BmiModel.BmiModel;
+import BmiModel.Person;
 import BmiView.BmiView;
 
-public class BmiController<person> {
+public class BmiController {
     private BmiView view;
 
     public BmiController(BmiView vista) {
@@ -14,7 +15,7 @@ public class BmiController<person> {
         double weight = view.requestweight();
         double height = view.requestheight();
 
-        person person = new person(weight, height);
+        Person person = new Person(weight, height);
 
         BmiModel model = new BmiModel(person);
 
